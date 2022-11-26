@@ -33,7 +33,8 @@ $ npm run server
 or
 $ yarn server
 ```
-*3번의 dev server 와 다른 콘솔에서 띄워줍니다.
+
+\*3번의 dev server 와 다른 콘솔에서 띄워줍니다.
 
 5. build + serve
 
@@ -46,3 +47,13 @@ $ yarn serve
 ### 질문
 
 궁금하신 부분은 강의 내 질문 & 답변 게시판을 이용해주시길 바랍니다.
+
+---
+
+> ⚠︎ 아래 내용은 원본 README에 포함되지 않은 내용 입니다! (개인 공부용)
+
+**run cra-bundle-analyzer**
+
+```
+$ yarn cra-bundle-analyzer
+```

@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Header from './components/Header';
 import InfoTable from './components/InfoTable';
@@ -10,9 +10,9 @@ const LazyImageModal = lazy(() => import('./components/ImageModal'));
 function App() {
   const [showModal, setShowModal] = useState(false);
 
-  const handleButtonModalMouseEnter = () => {
+  useEffect(() => {
     const component = import('./components/ImageModal');
-  };
+  }, []);
 
   return (
     <div className="App">
@@ -22,7 +22,6 @@ function App() {
         onClick={() => {
           setShowModal(true);
         }}
-        onMouseEnter={handleButtonModalMouseEnter}
       >
         올림픽 사진 보기
       </ButtonModal>

@@ -4,14 +4,19 @@ import Header from './components/Header';
 import InfoTable from './components/InfoTable';
 import SurveyChart from './components/SurveyChart';
 import Footer from './components/Footer';
+import { loadImage } from './utils';
 
-const LazyImageModal = lazy(() => import('./components/ImageModal'));
+const FIRST_FULL_IMAGE_PATH = `https://stillmed.olympic.org/media/Photos/2016/08/20/part-1/20-08-2016-Football-Men-01.jpg?interpolation=lanczos-none&resize=*:800`;
+const IMAGE_MODAL_PATH = `./components/ImageModal`;
+
+const LazyImageModal = lazy(() => import(`${IMAGE_MODAL_PATH}`));
 
 function App() {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    const component = import('./components/ImageModal');
+    const component = import(`${IMAGE_MODAL_PATH}`);
+    loadImage(FIRST_FULL_IMAGE_PATH);
   }, []);
 
   return (

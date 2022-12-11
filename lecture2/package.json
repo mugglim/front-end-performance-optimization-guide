@@ -16,7 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "server": "node ./node_modules/json-server/lib/cli/bin.js --watch ./server/database.json -c ./server/config.json",
-    "cra-bundle-analyzer": "npx cra-bundle-analyzer"
+    "analyze": "npx cra-bundle-analyzer"
   },
   "eslintConfig": {
     "extends": "react-app"

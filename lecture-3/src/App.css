@@ -5,9 +5,9 @@
 @font-face {
   font-family: BMYEONSUNG;
   /* 폰트 우선순위 적용 */
-  src: url('./assets/fonts/BMYEONSUNG.woff2') format('woff2'),
-    url('./assets/fonts/BMYEONSUNG.woff') format('woff'),
-    url('./assets/fonts/BMYEONSUNG.ttf') format('ttf');
+  src: url('./assets/fonts/subset-BMYEONSUNG.woff2') format('woff2'),
+    url('./assets/fonts/subset-BMYEONSUNG.woff') format('woff'),
+    url('./assets/fonts/subset-BMYEONSUNG.ttf') format('ttf');
 
   /* FOIT */
   font-display: block;

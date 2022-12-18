@@ -9,6 +9,7 @@ const useLazyImage = (src) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         entry.target.src = src;
+        observer.unobserve(entry.target);
       });
     };
 

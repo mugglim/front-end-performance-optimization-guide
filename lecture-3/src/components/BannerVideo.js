@@ -14,8 +14,6 @@ function BannerVideo() {
     });
   }, []);
 
-  console.log(isFontLoaded);
-
   return (
     <div className="BannerVideo w-full h-screen overflow-hidden relative bg-texture">
       <div className="absolute h-screen w-full left-1/2">

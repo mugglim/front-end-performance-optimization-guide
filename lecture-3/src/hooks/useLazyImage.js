@@ -8,7 +8,15 @@ const useLazyImage = (src) => {
     const handleObserverObserved = (entries, observer) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        entry.target.src = src;
+
+        const { target } = entry;
+        const { previousSibling } = target;
+
+        const jpgSrc = target.dataset.src;
+        const webpSrc = previousSibling.dataset.srcset;
+
+        entry.target.src = jpgSrc;
+        previousSibling.srcset = webpSrc;
         observer.unobserve(entry.target);
       });
     };

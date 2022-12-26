@@ -17,11 +17,19 @@ function PhotoItem({ photo: { urls, alt } }) {
   );
 }
 
-const ImageWrap = styled.div``;
+const ImageWrap = styled.div`
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+`;
 
 const Image = styled.img`
   cursor: pointer;
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 export default PhotoItem;

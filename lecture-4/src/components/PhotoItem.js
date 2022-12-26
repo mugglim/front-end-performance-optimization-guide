@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { showModal } from '../redux/imageModal';
@@ -12,7 +13,10 @@ function PhotoItem({ photo: { urls, alt } }) {
 
   return (
     <ImageWrap>
-      <Image src={urls.small + '&t=' + new Date().getTime()} alt={alt} onClick={openModal} />
+      {/* 상단에 `1000px` 만큼 offset을 가짐 (프리패칭 용도) */}
+      <LazyLoad offset={1_000}>
+        <Image src={urls.small + '&t=' + new Date().getTime()} alt={alt} onClick={openModal} />
+      </LazyLoad>
     </ImageWrap>
   );
 }
